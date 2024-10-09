@@ -1,26 +1,109 @@
+let str = "akhil";
+let str1 = 'str1'
+let str2 = `str2`;
+let str3 = new String("Akhil");
+let str4 = str;
+
+str4[0] = 'b';
+
+console.log(str);
+console.log(str3);
+
+
+// function sumInput(){
+//     let arr = [];
+//     while(true){
+//         let value = prompt("Number please", 0);
+//         if(value === "" || value === null || !isFinite(value)){
+//             break;
+//         }
+//         arr.push(+value);
+//     }
+
+//     let sum = 0;
+//     for(let i=0;i<arr.length;i++){
+//         sum = sum + arr[i];
+//     }
+//     return sum;
+// }
+// console.log(sumInput());
+
+
+
+
+
+
+// prompt
+// let name = prompt("Please enter your name");
+// console.log(name);
+// write a function sumInput(), asks values from user and store inot an Array
+// finish asking values if user has given any non-numeric String, or press cancel
+// calculates the sum and return that
+
+
+// let playerInfo = ["akhil","aakash","anuj","priyanshu"];
+// // let playerString = playerInfo.join(" - ")
+// // let str = "akhil - aakash - anuj - priyanshu";
+// // let arr = str.split("a");
+// // console.log(arr);
+// delete playerInfo[1]
+// playerInfo[1] = null;
+// console.log(playerInfo);
+
+
+// let playerString = playerInfo.toString();
+// console.log(typeof playerString);
+
+
+
+
+
+
+
+// let employee = {
+//     name: 'John Doe',
+//     age: 30,
+// }
+
+// let name = "Akhil Sharma";
+
+// function greet(name){
+//     return name;
+// }
+
+// let newEmployee = employee;
+
+
+
+
+
+
+
+
+
 //Arrays in Javascript
 // 1. Size, 2.Homogenous  in java arrays
 //array of object
-let playerInfo = [
-    { name: "John", score: 26 },
-    { name: "Jane", score: 30 },
-    { name:"vivek", score:10 },
-    { name:"Rahul", score:20 },
-    { name:"Junaid", score:50 },
-    { name:"Avantika", score:60 },
-    { name:"Saani", score:17 }
-];
+// let playerInfo = [
+//     { name: "John", score: 26 },
+//     { name: "Jane", score: 30 },
+//     { name:"vivek", score:10 },
+//     { name:"Rahul", score:20 },
+//     { name:"Junaid", score:50 },
+//     { name:"Avantika", score:60 },
+//     { name:"Saani", score:17 }
+// ];
 //shallow copy
-let employee = {
-    eid:123,
-    ename:"skdfuv",
-    salary:100
-}
-let newemployee = employee;
-newemployee.salary = 200;
-employee.ename = "skduhckasgfvkagdfvae"
-console.log(employee);
-console.log(newemployee);
+// let employee = {
+//     eid:123,
+//     ename:"skdfuv",
+//     salary:100
+// }
+// let newemployee = employee;
+// newemployee.salary = 200;
+// employee.ename = "skduhckasgfvkagdfvae"
+// console.log(employee);
+// console.log(newemployee);
 
 
 
