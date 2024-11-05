@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <h1>Gemini Clone</h1>
+
+    <input type="text" name="" id="text" />
+    <button>Search</button>
+    <div></div>
+    <script type="importmap">
+      {
+        "imports": {
+          "@google/generative-ai": "https://esm.run/@google/generative-ai"
+        }
+      }
+    </script>
+
+    <script type="module">
+      import { GoogleGenerativeAI } from "@google/generative-ai";
+
+      // Fetch your API_KEY
+        // const API_KEY = "AIzaSyAcSbtI31LZPhsFYpCV_ZWqFR68BdmLvd0";
+
+      let text = document.getElementById("text");
+      let buton = document.querySelector("button");
+      let div = document.querySelector("div");
+
+      async function getGeminiResponse() {
+        const genAI = new GoogleGenerativeAI(API_KEY);
+        const model = genAI.getGenerativeModel({ model: "gemini-1.5-flash" });
+        console.log(text.value);
+
+        // const prompt = "Why is ChatGpt better than you ?";
+
+        const result = await model.generateContent(text.value);
+        let ans = result.response.text();
+        console.log(result.response.text());
+
+        let para = document.createElement('p');
+        para.innerText = ans;
+        div.appendChild(para);
+      }
+
+      buton.addEventListener("click", getGeminiResponse);
+    </script>
+  </body>
+</html>
