@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Libraries</title>
+  </head>
+  <body>
+    <h1>Javascript Libraries</h1>
+
+    <div>
+      <canvas id="myChart"></canvas>
+    </div>
+
+    <!-- <script src="https://cdn.jsdelivr.net/npm/chart.js"></script> -->
+    <!-- <script src="lodash.js"></script> -->
+
+    <script src="https://cdn.jsdelivr.net/npm/lodash@4.17.21/lodash.min.js"></script>
+
+    <script>
+      function square(n) {
+        return n * n;
+      }
+      let ans  = _.map([4, 8], square);
+      console.log(ans);
+      
+      //   const ctx = document.getElementById("myChart");
+      //   let covidChart = new Chart(ctx, {
+      //     type:'line',
+      //     data:{
+      //         labels:[],
+      //         datasets:[{
+      //             label:'Covid19 Cases',
+      //             data:[]
+      //         }]
+      //     }
+      //   })
+
+      //   async function fetchCovidData() {
+      //     try{
+      //         let response = await fetch("https://disease.sh/v3/covid-19/historical/all?lastdays=10");
+      //         let data = await response.json();
+      //         console.log(data);
+      //         let dates = Object.keys(data.cases);
+      //         let cases = Object.values(data.cases);
+      //         console.log(dates, cases);
+      //         covidChart.data.labels = dates;
+      //         covidChart.data.datasets[0].data = cases;
+      //         covidChart.update();
+      //     }catch(e){
+      //         console.log(e);
+      //     }
+      //   }
+      //   fetchCovidData();
+    </script>
+  </body>
+</html>

@@ -7,20 +7,23 @@
 // fetchData();
 
 
+let timeout; // Timeout variable for debounce
 
-document.getElementById('movie-search').addEventListener('keyup',(e)=>{
-    let timer;
-    if(timer) clearTimeout(timer);
+    document.getElementById('movie-search').addEventListener('input', (e) => {
+      clearTimeout(timeout); // Clear the previous timeout
+      const query = e.target.value.trim();
+      if (query.length < 3) return; // Only search if 3+ characters
 
-    let query = e.target.value.trim();
-    if(query.length < 3) return;
+      timeout = setTimeout(async () => {
+        const res = await fetch(`http://www.omdbapi.com/?apikey=c8d793ca&s=${query}`);
+        const data = await res.json();
 
-    timer = setTimeout(async ()=>{
-        let data =  await fetch(`http://www.omdbapi.com/?apikey=c8d793ca&s=${query}`);
-        let result = await data.json();
-        console.log(result);
-    }, 2000)
-})
+        console.log(data);
+        
+        document.getElementById('movie-results').innerHTML =
+          data.Search?.map(movie => `<div>${movie.Title} (${movie.Year})</div>`).join('') || 'No results found';
+      }, 1000); // 1000ms debounce delay
+    });
 
 
 
