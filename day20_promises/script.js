@@ -66,19 +66,19 @@ fetchData();
 
 
 
-// takingJokeFromServer()
-// .then((joke)=>{
-//     return translateJoke(joke);
-// })
-// .then((translatedJoke)=>{
-//     return postJoke(translatedJoke)
-// })
-// .then(()=>{
-//     console.log("joke posted");
-// })
-// .catch((error)=>{
-//     console.log("error", error);
-// })
+takingJokeFromServer()
+.then((joke)=>{
+    return translateJoke(joke);
+})
+.then((translatedJoke)=>{
+    return postJoke(translatedJoke)
+})
+.then(()=>{
+    console.log("joke posted");
+})
+.catch((error)=>{
+    console.log("error", error);
+})
 
 
 // let logIn = false;
@@ -109,3 +109,7 @@ fetchData();
 // }));
 
 // console.log(p1);
+
+// fetch()
+// .then((data)=>{})
+// .then((result)=>data.json)

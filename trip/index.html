@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Trip Itinerary Generator</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Trip Itinerary Generator</h1>
+        <form id="trip-form">
+            <label for="trip-name">Trip Place:</label>
+            <input type="text" id="trip-name" placeholder="Enter your trip name" required>
+            
+            <label for="start-date">Start Date:</label>
+            <input type="date" id="start-date" required>
+            
+            <label for="end-date">End Date:</label>
+            <input type="date" id="end-date" required>
+            
+            <button type="submit">Generate Itinerary</button>
+        </form>
+        <div id="itinerary">
+            <!-- Itinerary will be displayed here -->
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
